@@ -1,0 +1,23 @@
+BeanFactory vs ApplicationContext
+
+Difference between BeanFactory & ApplicationContext
+
+1) BeanFactory & ApplicationContext are different types of "Spring Container" which are used for managing beans in a Spring application.
+2) BeanFactory is simpler and lightweight, ideal for basic small, standalone applications.
+3) ApplicationContext is more powerful and feature-rich, supporting a wider range of functionalities for enterprise-level applications.
+ 
+Difference Between BeanFactory and ApplicationContext:
+
+The following are the key differences between BeanFactory and ApplicationContext in Spring Framework:
+
+| Aspect                   | BeanFactory                                                                          | ApplicationContext                                                                          |
+| -----------------------  | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| 1. Definition            | It is "basic container" that manages beans with minimal features.                    | Its is "advanced container" extending BeanFactory with extra features.                      |
+| 2. Usage                 | It is suitable for small, standalone applications.                                   | It is suitable for web applications, AOP, ORM and large enterprise applications.            |
+| 3. Resource Usage        | It requires less memory, suitable for lightweight or memory-critical applications.   | It uses more memory, providing additional features for enterprise applications.             |
+| 4. Initialization        | It uses lazy initialization i.e. it creates the beans only when needed.              | It uses eager initialization i.e. it loads and creates the beans at container startup.      |
+| 5. Bean Scopes Supported | It supports only Singleton and Prototype scopes.                                     | It supports all scopes, including Request and Session, for web contexts.                    | 
+| 6. Annotation Support    | It doesn’t support annotations; requires XML configuration.                          | It supports annotations for simpler configuration.                                          |
+| 7. Internationalization	 | It does not provide support for internationalization (i18n).                        	| It provides the i18n support for multilingual applications.                                 |
+| 8. Event Handling	       | It does not support event handling.	                                                 | It supports event handling via ApplicationEvent and ApplicationListener.                    | 
+| 9. Bean Post Processing	 | It requires manual registration of BeanPostProcessor and BeanFactoryPostProcessor.  	| It automatically registers BeanPostProcessor and BeanFactoryPostProcessor at startup.       |
